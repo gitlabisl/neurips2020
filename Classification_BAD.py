@@ -82,6 +82,6 @@ print('Test_Accuracy: %.2f' % (test_accuracy*100))
 test_tn, test_fp, test_fn, test_tp = confusion_matrix(y_test,model.predict_classes(X_test)).ravel()
 test_sensitivity = test_tp/(test_tp+test_fn)
 test_specificity= test_tn/(test_tn+test_fp)
-scipy.io.savemat('/home/vinay/Documents/NIPS_20/results_bp/amplitude_200.mat', mdict={'mean_Val': Avg_Validation_accuracy,'std_Val':Std_Validation_accuracy,
+scipy.io.savemat('/home/xx/Documents/NIPS_20/results_bp/amplitude_200.mat', mdict={'mean_Val': Avg_Validation_accuracy,'std_Val':Std_Validation_accuracy,
                                                                                             'mean_Val_Sensi': Avg_Validation_sensitivity,'mean_Val_Speci':Avg_Validation_specificity,
                                                                                             'std_Val_Sensi':Std_Validation_sensitivity,'std_Val_Speci':Std_validation_specificity,'Test_acc': test_accuracy*100,'test_sensi':test_sensitivity,'test_speci':test_specificity})
